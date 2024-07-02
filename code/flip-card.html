@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin:0;
+      box-sizing: border-box;
+    }
+  </style>
+  <!-- 첫번째 카드용 style -->
+  <style>    
+    .maincontainer {
+      position: relative;
+      width: 250px;
+      height: 320px;
+      background :green;
+    }
+
+    .card1 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: all 0.5s ease;
+      background: yellow;
+    }
+
+    .card1:hover {
+      /* transition에서 시간을 조절한다. */
+      transition: transform 2s linear; 
+      transform: rotateY(180deg);
+    }
+
+    /* 겹치는 부분은 다음과 같이 설정하자! */
+    .front1, .back1 {
+      position:absolute;
+      width:100%;
+      height:100%;
+      backface-visibility: hidden;
+      color: #333;
+    }
+
+    .front1 {
+      background: #ffc728;
+    }
+
+    .back1 {
+      background: #fafafa;
+      transform: rotateY(180deg);
+    }
+  </style>
+  <!-- 두번째 카드용 -->
+   <style>
+    /* .card2 {
+
+    } */
+   </style>
+</head>
+<body>
+  <div>
+    <h2>첫번째 카드</h2>
+  </div>
+  <div class="maincontainer">
+    <div id="card" class="card1">
+      <div class="front1">front of card</div>
+      <div class="back1">back of card</div>
+    </div>
+  </div>
+  <div>
+    <h2>두번째 카드</h2>
+    <div class="card2 middle">
+      <div class="front2">
+        <img src="./img/height.webp" alt="">
+      </div>
+      <div class="back2">
+        <div class="back-content">
+          <h5>DarkCode</h5>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    /* 적용하고자 하는 클래스를 정의  */
+    .loading-bar {
+      width:10px;
+      height: 100px;
+      background-color: red;
+      animation: loading 1.5s linear infinite;
+      animation-fill-mode:forwards;
+    }
+    /* @keyframes loading {
+      0% {
+        width:0px;
+        background-color: #ff0101;
+      }
+      100% {
+        width: 300px;
+        background-color: rgb(13, 255, 5);
+      }
+    } */
+
+    /* 색상을 gradient 로 표현하고 싶다면 다음과 같이 사용 */
+    @keyframes loading {
+      0% {
+        width: 0px;
+        /* background-color: red; */
+        /* background: linear-gradient(to right, #ff0101, #ff0101); 시작할 때 빨간색 그라데이션 */
+      }
+      30% {
+        width: 50px;
+      }
+      100% {
+        width: 0px;
+        /* background: linear-gradient(to right, #ff0101, rgb(13, 255, 5),rgb(22, 53, 21)); 끝날 때 빨간색에서 초록색으로 그라데이션 */
+      }
+    }
+  
+  
+  </style>
+</head>
+<body>
+  <div class="loading-bar"></div>
+  
+</body>
+</html>
